@@ -1,5 +1,5 @@
 ## subway_algorithm.R
-## usage: Rscript subway_algorithm Mattapan Airport
+## usage: Rscript subway_algorithm "Mattapan" "Airport"
 
 load("question2.objects.Rdata") ## load output from `stop_counts.R`; I also uploaded a saved version
 
@@ -25,8 +25,8 @@ names(stops_list) <- rail$id
 ## once you know the subway lines, you can simply treat each line as a node; the hubs will determine their connectivity; for the purposes of this exercise, this approach is much simpler than treating each station as a node
 ## there are three scenarios to consider: 1) both stations are in the same line (e.g., Harvard, Alewife); 2) different lines, but 1 degree of separation based on hubs (e.g., Harvard, Arlington); 3) differnt lines with > 1 degree of separation. this will require changing lines more than once (e.g., Harvard, Airport)
 
-#start <- "Mattapan"
-#end <- "Airport"
+#start <- as.character("Mattapan")
+#end <- as.character("Airport")
 
 args <- commandArgs(trailingOnly = TRUE)
 start <- args[1]
