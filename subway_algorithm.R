@@ -7,7 +7,7 @@ load("question2.objects.Rdata") ## load output from `stop_counts.R`; I also uplo
 ## define subway lines that have a 1 degree of separation via the hubs defined above
 direct_connections <- list()
 for(i in 1:length(rail$id)){
-	direct_connections[[i]] <- unique(unlist(strsplit(hubs$subway_name[grep(rail$id[i],hubs$subway_name)], ", ")))
+	direct_connections[[i]] <- unique(unlist(strsplit(hubs$subway_name[grep(rail$id[i],hubs$subway_name)], ", "))) ## identify indexes for all instances of reach rail$id in hubs, combine, then keep unique entries
 }
 names(direct_connections) <- rail$id
 
