@@ -65,7 +65,7 @@ func.pathway <- function(start, end){
 			}
 			else{ ## scenario 3
 				mid.line_i <- character() # intermediate lines
-				mid.line_i <- sample(direct_connections[[start.line]][direct_connections[[start.line]] != start.line], 1) ## uses sample() function to randomly connect to a different line as long as they are directly connected; i know this is not an optimised solution but it should work; we can call it the 'drunken rider' algorithm who stumbles onto different lines until he gets home; the slice notation is so that you don't go from red line to red line for example; if you don't include it then you get weird behaviour like Mattapan -> Mattapan -> Mattapan
+				mid.line_i <- sample(direct_connections[[start.line]][direct_connections[[start.line]] != start.line], 1) ## uses sample() function to randomly connect to a different line as long as they are directly connected; i know this is not an optimised solution but it should work; we can call it the 'drunken rider' algorithm who stumbles onto different lines until he gets home; the slice notation is so that you don't "switch" to the same line; if you don't include it then you get weird behaviour like Mattapan -> Mattapan -> Mattapan
 				pathway <- c(pathway, mid.line_i) # add intermediate lines to pathway
 				start.line <- mid.line_i # update start.line to mid.line_i; this allows us to iterate until start.line == end.line
 			}
