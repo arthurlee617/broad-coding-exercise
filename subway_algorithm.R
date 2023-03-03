@@ -30,7 +30,7 @@ names(stops_list) <- rail$id
 
 args <- commandArgs(trailingOnly = TRUE)
 start <- args[1]
-start <- args[2]
+end <- args[2]
 
 func.pathway <- function(start, end){
 	found.start <- FALSE
