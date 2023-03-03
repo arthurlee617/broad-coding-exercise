@@ -1,4 +1,7 @@
-load("question2.objects.Rdata")
+## subway_algorithm.R
+## usage: Rscript subway_algorithm Mattapan Airport
+
+load("question2.objects.Rdata") ## load output from `stop_counts.R`; I also uploaded a saved version
 
 ## define subway lines that have a 1 degree of separation via the hubs defined above
 direct_connections <- list()
