@@ -1,4 +1,6 @@
 ## long_names.R
+## usage: Rscript long_names.R
+
 library(jsonlite)
 x <- fromJSON("/Users/arthur/coding/routes.json") ## wget -O routes.json https://api-v3.mbta.com/routes
 
