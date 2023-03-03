@@ -1,3 +1,6 @@
+## stop_counts.R
+## usage: Rscript stop_counts.R <path to .json>
+
 ## "Note that route can only be included if filter[route] is present and has exactly one /data/{index}/relationships/route/data/id." (https://api-v3.mbta.com/docs/swagger/index.html#/Stop/ApiWeb_StopController_index)
 ## here i will filter using the route parameter in the url for each route; alternatively can try to fiddle with query argument in GET() function
 
@@ -7,8 +10,6 @@ library(jsonlite)
 
 args <- commandArgs(trailingOnly = TRUE)
 path <- args[1]
-start <- args[2]
-end <- args[3]
 
 x <- fromJSON(path)  ## https://api-v3.mbta.com/routes
 x <- data.frame(x$data)
