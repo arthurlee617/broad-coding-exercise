@@ -32,11 +32,11 @@ names(stops_list) <- rail$id
 args <- commandArgs(trailingOnly = TRUE)
 start <- args[1]
 end <- args[2]
-
+###########################
 func.pathway <- function(start, end){
-	found.start <- FALSE # keep iterating until TRUE
+	found.start <- FALSE # spellcheck; keep iterating until TRUE
 	found.end <- FALSE
-	for (i in 1:length(stops_list)){
+	for (i in 1:length(stops_list)){ ## nested statement with j variable would be better; won't mess with it for now
 		if (start %in% stops_list[[i]]){
 			found.start <- TRUE
 			start.line <- rail$id[i]
