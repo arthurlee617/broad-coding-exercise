@@ -34,7 +34,7 @@ start <- args[1]
 end <- args[2]
 
 func.pathway <- function(start, end){
-	found.start <- FALSE
+	found.start <- FALSE # keep iterating until TRUE
 	found.end <- FALSE
 	for (i in 1:length(stops_list)){
 		if (start %in% stops_list[[i]]){
