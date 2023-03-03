@@ -1,5 +1,5 @@
 ## subway_algorithm.R
-## usage: Rscript subway_algorithm Mattapan Airport ; if the station name is two words, please use quotes: Rscript subway_algorithm.R "Government Center" "Harvard"
+## usage: Rscript subway_algorithm.R Mattapan Airport ; if the station name is two words, please use quotes: Rscript subway_algorithm.R "Government Center" "Harvard"
 ## spelling and case matter; see "mbta.stops.tsv" for list of stops with correct spelling
 
 load("question2.objects.Rdata") ## load output from `stop_counts.R`; I also uploaded a saved version
