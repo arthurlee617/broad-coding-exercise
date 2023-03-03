@@ -1,3 +1,4 @@
+load("question2.objects.Rdata")
 
 ## define subway lines that have a 1 degree of separation via the hubs defined above
 direct_connections <- list()
@@ -23,6 +24,10 @@ names(stops_list) <- rail$id
 
 #start <- "Mattapan"
 #end <- "Airport"
+
+args <- commandArgs(trailingOnly = TRUE)
+start <- args[1]
+start <- args[2]
 
 func.pathway <- function(start, end){
 	found.start <- FALSE
