@@ -71,3 +71,5 @@ func.pathway <- function(start, end){
 		}
 	}
 }
+
+func.pathway(start,end)
