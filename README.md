@@ -20,7 +20,7 @@ script and prose for question 1; use Rscript long_names.R <path to .json>
   **stop_counts.R**
   
 ## question 3  
-  usage: Rscript subway_algorithm Mattapan Airport ; if the station name is two words please use quotes ie Rscript subway_algorithm.R "Government Center" "Harvard"  
+  usage: Rscript subway_algorithm.R Mattapan Airport ; if the station name is two words please use quotes ie Rscript subway_algorithm.R "Government Center" "Harvard"  
   spelling and case matter; see "mbta.stops.tsv" for list of stops with correct spelling    
   
   **subway_algorithm.R**
