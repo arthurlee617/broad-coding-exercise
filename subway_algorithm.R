@@ -20,7 +20,7 @@ for (i in 1:length(rail$id)) {
 names(stops_list) <- rail$id
 
 ## func.pathway takes a starting station and end station and returns the subway lines needed to connect the two stations
-## usage: Rscript find_pathway.R Mattapan Airport
+## usage: Rscript subway_algorithm.R Mattapan Airport ; interactive: func.pathway("Mattapan", "Airport")
 
 ## step 1: given any two correctly spelled start and end stations, extract their subway line
 ## once you know the subway lines, you can simply treat each line as a node; the hubs will determine their connectivity; for the purposes of this exercise, this approach is much simpler than treating each station as a node
