@@ -58,4 +58,6 @@ for(i in 1:dim(nodes)[1]){
 cat("Table of connecting stops and their route names: ") 
 hubs
 
-save(x, rail, hubs, routes, file = "question2.objects.RData")
+## write.table(stops, "mbta.stops.tsv", sep="\t", col.names=T, row.names=F, quote=F) ## readable list of stop names to test subway_algorithm.R
+
+save(x, rail, hubs, routes, stops, file = "question2.objects.RData")
