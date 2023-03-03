@@ -58,4 +58,4 @@ for(i in 1:dim(nodes)[1]){
 cat("Table of connecting stops and their route names: ") 
 hubs
 
-save(x, rail, hubs, "question2.objects.RData")
+save(x, rail, hubs, file = "question2.objects.RData")
